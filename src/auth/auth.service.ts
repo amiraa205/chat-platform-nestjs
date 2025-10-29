@@ -1,9 +1,11 @@
+/* eslint-disable @typescript-eslint/require-await */
 import { Injectable } from '@nestjs/common';
 import { IAuthService } from './auth';
 
 @Injectable()
 export class AuthService implements IAuthService {
-  // eslint-disable-next-line @typescript-eslint/require-await
+  constructor() {}
+
   async validateUser(): Promise<boolean> {
     return true;
   }
