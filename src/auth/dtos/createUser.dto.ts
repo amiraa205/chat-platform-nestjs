@@ -12,6 +12,11 @@ export class CreateUserDto {
   firstName: string;
 
   @IsNotEmpty()
+  @MinLength(5)
+  @MaxLength(100)
+  email: string;
+
+  @IsNotEmpty()
   @MinLength(2)
   @MaxLength(32)
   lastName: string;
